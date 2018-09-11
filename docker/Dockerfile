@@ -9,7 +9,7 @@ WORKDIR /infrasim-compute
 ADD . /infrasim-compute
 
 # Install dependency
-RUN apt-get update
+RUN apt-get update -y
 RUN apt-get install -y socat build-essential libssl-dev libffi-dev python-dev libaio-dev bridge-utils git apt-utils python-pip
 RUN apt-get install -y net-tools libnuma-dev libglib2.0-dev libapt-pkg5.0 iputils-ping isc-dhcp-client
 RUN apt-get install -y openssh-server
